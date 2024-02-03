@@ -30,11 +30,8 @@ public class ContractService {
 			LocalDate dueDate = contract.getDue().plusMonths(i);
 			
 			contract.getInstallments().add(new Installment(dueDate, contract.getTotalValue()/months + interest + payFee));
-			
-			
-		//contract.addInstallment(new Installment(contract.getDue(), ((contract.getTotalValue()/months)  + ops.paymentFee(contract.getTotalValue())) + ops.interest(contract.getTotalValue(), i)  ));
 		}
-		//contract.addInstallment(new Installment(contract.getDue(), (contract.getTotalValue()/months) + ops.paymentFee(contract.getTotalValue()) + ops.interest(contract.getTotalValue(), months) ));
+		
 	}
 	
 }

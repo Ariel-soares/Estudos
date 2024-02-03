@@ -44,9 +44,6 @@ public class Application {
 		for(Installment i : contract.getInstallments()) {
 			System.out.println(i.toString());;
 		}
-		
-		
-		
 		sc.close();
 	}
 
