@@ -12,13 +12,9 @@ public class ContractService {
 	public ContractService() {
 	}
 	
-	
-	
 	public ContractService(OnlinePaymentService ops) {
 		this.ops = ops;
 	}
-
-
 
 	public void processContract(Contract contract, Integer months) {
 		for(int i = 1; i <= months; i++) {
@@ -30,8 +26,6 @@ public class ContractService {
 			LocalDate dueDate = contract.getDue().plusMonths(i);
 			
 			contract.getInstallments().add(new Installment(dueDate, contract.getTotalValue()/months + interest + payFee));
-		}
-		
+		}	
 	}
-	
 }

@@ -21,6 +21,7 @@ public class Application {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		
+		
 		OnlinePaymentService ops = new PaypalService();
 
 		System.out.println("Entre os dados do contrato: ");
